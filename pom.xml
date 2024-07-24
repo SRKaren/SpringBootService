@@ -57,4 +57,15 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/usuario/mi-repositorio</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/usuario/mi-repositorio</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
