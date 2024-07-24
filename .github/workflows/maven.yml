@@ -26,7 +26,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -f pom.xml clean package
+      run: mvn clean install
       
     - name: Publish artifact to GitHub Packages
       run: mvn deploy
