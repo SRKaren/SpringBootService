@@ -62,10 +62,6 @@
             <id>github</id>
             <url>https://maven.pkg.github.com/SRKaren/SpringBootService</url>
         </repository>
-        <snapshotRepository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/SRKaren/SpringBootService</url>
-        </snapshotRepository>
     </distributionManagement>
 
 </project>

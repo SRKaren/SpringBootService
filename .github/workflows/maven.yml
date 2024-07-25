@@ -29,7 +29,7 @@ jobs:
       run: mvn clean install
       
     - name: Publish artifact to GitHub Packages
-      run: mvn deploy
+      run: mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MAVEN_REPOSITORY_URL: https://maven.pkg.github.com/SRKaren/SpringBootService
