@@ -23,7 +23,16 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn clean package
+        run: mvn clean install -X
+
+      - name: unit tests
+        run: mvn test
+
+      - name: functional tests
+        run: mvn verify
+
+      - name: static code analysis
+        run: mvn sonar:sonar -Dsonar.projectKey=SpringBootService -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       - name: Publish to GitHub Packages
         run: mvn --batch-mode deploy
